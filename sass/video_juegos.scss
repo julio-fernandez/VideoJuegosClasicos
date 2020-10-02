@@ -1,42 +1,120 @@
+$color_green:#05C705;
+
 html{
     box-sizing:  border-box;
 }
 *, *::before,*::after{
     box-sizing: inherit;
 }
+
+@font-face {
+    font-family: monoton;
+    src: url('../fonts/monoton.woff2');
+}
+
 body{
     margin: 0px;
 
     background-image: url("../img/matrix.png"), url("../img/matrix2.png") ;
-    //background-size:cover ;
     background-repeat: repeat-y,repeat-y;
-    //background-repeat: no-repeat;
     background-size: 110px , 110px;
     background-position: left , right;
+    background-color: black;
+
+    text-align: justify;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/* ----------------------------------colores */
+.text-yellow{
+    color: yellow;
+}
+.text-green{
+    color: $color_green;
+}
+.text-red{
+    color: red;
+}
+/* ---------------------------------- Contenedor principal / primer segmento*/
+.emogis{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: $color_green;
+}
+
 .contenedor{
     background-color: black;
     width: 80%;
     margin: 0 auto;
-
-    -webkit-box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
+    color: white;
+    //border: solid red;
+    // -webkit-box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
+    // -moz-box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
+    // box-shadow: 0px 0px 6px 12px rgba(0,0,0,0.65);
 }
-.contenedor{
-    .parent {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        color: white;
-    }
-    .section{
-        padding: 40px 10px;
-    }
-    h1{
-        padding: 0px;
+.titulo-contenedor{
+   
+    display: flex;
+    justify-content: center;;
+
+    .titulo{
+        font-family: monoton;
+        font-size: 3.5vw;
+
+        text-decoration-line: underline;
         text-align: center;
+        
+        letter-spacing: 10px;
+        text-transform: uppercase;
+
+        display: inline;
+        border-bottom: solid $color_green 2px;
+
+
+        color: $color_green;
     }
-    footer{
-        text-align: center;
+}
+/* ---------------------------------- Contenido principal / cards*/
+.card{
+    border: solid white 2px;
+}
+.titulo-card{
+    border-bottom: solid white 1px;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    background-color: $color_green;
+    letter-spacing: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    
+}
+
+
+.body-card{
+    padding: 30px 10px ;
+}
+.texto-body-card{
+     width: 65%;
+     display: inline-block;
+}
+.imagen-body-card{
+    width: auto;
+    //border: solid yellow;
+    display: inline-block;
+    //margin: 30px;
+    img{
+        border: white solid 5px;
+        outline: 5px solid $color_green;
+        margin: 6px;
+        
     }
+}
+/* ---------------------------------- Meida querys*/
+#fecha-mod{
+    margin-top: 30px;
+    border-top: solid $color_green;
+    border-bottom: solid $color_green;
 }
